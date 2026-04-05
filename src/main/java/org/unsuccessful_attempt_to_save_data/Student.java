@@ -1,8 +1,5 @@
-package org.priya;
+package org.unsuccessful_attempt_to_save_data;
 
-import jakarta.persistence.Entity;
-
-@Entity
 public class Student {
 
     private int rollNo;

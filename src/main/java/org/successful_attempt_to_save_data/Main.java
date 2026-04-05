@@ -1,8 +1,9 @@
-package org.priya;
+package org.successful_attempt_to_save_data;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.unsuccessful_attempt_to_save_data.Student;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -15,8 +16,6 @@ public class Main {
         s1.setsAge(22);
 
         Configuration cfg=new Configuration();
-        //cfg.configure();
-        cfg.addAnnotatedClass(org.priya.Student.class);
         SessionFactory sf=cfg.buildSessionFactory();
         Session session=sf.openSession();
         session.persist(s1);  //to save it
