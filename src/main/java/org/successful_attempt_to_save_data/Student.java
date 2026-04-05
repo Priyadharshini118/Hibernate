@@ -1,7 +1,11 @@
 package org.successful_attempt_to_save_data;
 
-public class Student {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
+public class Student {
+    @Id
     private int rollNo;
     private String sName;
     private int sAge;
