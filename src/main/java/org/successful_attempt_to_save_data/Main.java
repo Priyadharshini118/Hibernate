@@ -18,7 +18,7 @@ public class Main {
         Configuration cfg=new Configuration();
         /*Exception: Unknown entity type 'org.successful_attempt_to_save_data.Student' ('Student' is not annotated '@Entity')*/
         cfg.addAnnotatedClass(org.successful_attempt_to_save_data.Student.class);
-        cfg.configure();
+        cfg.configure();//this will see for xml file(hibernate.cfg.xml) for configuration
         SessionFactory sf=cfg.buildSessionFactory();
 
         /* instead of
