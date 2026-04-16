@@ -11,6 +11,9 @@ public class Main {
     public static void main(String[] args) {
 
         Alien a1=new Alien();
+        a1.setAid(101);
+        a1.setAname("Priya");
+        a1.setTech("Java");
 
         SessionFactory sf=new Configuration()
                 .addAnnotatedClass(Alien.class)
@@ -19,6 +22,8 @@ public class Main {
 
         Session session=sf.openSession();
         Transaction transaction=session.beginTransaction();
+
+        session.persist(a1);
 
         transaction.commit();
         sf.close();

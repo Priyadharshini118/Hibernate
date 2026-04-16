@@ -1,13 +1,16 @@
 package org.change_table_coln_name;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+//@Entity(name="alien_table")
+@Table(name ="alien_table")
 public class Alien {
     @Id
     private int aid;
+    @Column(name = "alien_name")
     private String aname;
+    @Transient
     private String tech;
 
     public int getAid() {
